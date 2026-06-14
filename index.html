@@ -137,6 +137,21 @@ section{max-width:880px;margin:0 auto;padding:3.6rem 1.6rem}
 }
 .pub-link:hover{text-decoration:underline}
 
+/* ─── MEDIA / TALKS ─── */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.6rem}
+.media-card{background:var(--surf);border:1px solid var(--rule);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.media-card:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(15,33,66,.12)}
+.media-card:hover .media-title{color:var(--blue)}
+.media-thumb{position:relative;aspect-ratio:16/9;background:#0f2142;overflow:hidden}
+.media-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.media-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
+.media-play span{width:54px;height:54px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.3rem;padding-left:4px;transition:background .2s}
+.media-card:hover .media-play span{background:#e0245e}
+.media-body{padding:1rem 1.1rem 1.2rem;flex:1;display:flex;flex-direction:column}
+.media-src{font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--blue);text-transform:uppercase;margin-bottom:.45rem}
+.media-title{font-size:1rem;font-weight:700;line-height:1.45;color:var(--ink);flex:1}
+.media-date{font-size:.78rem;color:var(--light);margin-top:.6rem}
+
 /* ─── PLATFORM CARDS ─── */
 .platform{background:var(--navy);color:#fff}
 .platform .sec-label{color:#6fb3ff}
@@ -284,6 +299,52 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
       <span class="pub-journal">Medicine (Baltimore).</span> 2016 Nov;95(47):e5416.
     </div>
     <a class="pub-link" href="https://pubmed.ncbi.nlm.nih.gov/27893680/" target="_blank">PMID: 27893680 ↗</a>
+  </div>
+</section>
+
+<!-- ─── MEDIA / TALKS ─── -->
+<section style="padding-top:0">
+  <span class="sec-label">Media & Talks</span>
+  <h2 class="sec-title serif">媒體與影音</h2>
+  <p class="lead">受邀於電視健康節目與新聞媒體，解析神經科常見問題與罕見疾病。</p>
+  <div class="media-grid">
+
+    <a class="media-card" href="https://www.youtube.com/watch?v=iRKi_yOnegg" target="_blank" rel="noopener">
+      <div class="media-thumb">
+        <img src="https://img.youtube.com/vi/iRKi_yOnegg/hqdefault.jpg" alt="" loading="lazy">
+        <div class="media-play"><span>▶</span></div>
+      </div>
+      <div class="media-body">
+        <div class="media-src">TVBS · T觀點</div>
+        <div class="media-title">腦瘤、面癱與 5 大危險頭痛警訊</div>
+        <div class="media-date">電視健康節目專訪</div>
+      </div>
+    </a>
+
+    <a class="media-card" href="https://www.youtube.com/watch?v=TaACopzq92U" target="_blank" rel="noopener">
+      <div class="media-thumb">
+        <img src="https://img.youtube.com/vi/TaACopzq92U/hqdefault.jpg" alt="" loading="lazy">
+        <div class="media-play"><span>▶</span></div>
+      </div>
+      <div class="media-body">
+        <div class="media-src">健康 2.0</div>
+        <div class="media-title">巴金森病的警訊：視幻覺與步態僵直</div>
+        <div class="media-date">2025.03.23 · 電視健康節目專訪</div>
+      </div>
+    </a>
+
+    <a class="media-card" href="https://www.youtube.com/watch?v=N1r804biP2s" target="_blank" rel="noopener">
+      <div class="media-thumb">
+        <img src="https://img.youtube.com/vi/N1r804biP2s/hqdefault.jpg" alt="" loading="lazy">
+        <div class="media-play"><span>▶</span></div>
+      </div>
+      <div class="media-body">
+        <div class="media-src">蘋果新聞網 · Video Talk</div>
+        <div class="media-title">時常肌肉痛？最容易被忽略的罕病報你知</div>
+        <div class="media-date">新聞媒體專訪</div>
+      </div>
+    </a>
+
   </div>
 </section>
 
