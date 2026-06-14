@@ -151,6 +151,19 @@ section{max-width:880px;margin:0 auto;padding:3.6rem 1.6rem}
 .media-src{font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--blue);text-transform:uppercase;margin-bottom:.45rem}
 .media-title{font-size:1rem;font-weight:700;line-height:1.45;color:var(--ink);flex:1}
 .media-date{font-size:.78rem;color:var(--light);margin-top:.6rem}
+.media-subhd{display:flex;align-items:center;gap:12px;margin:2.4rem 0 1.2rem}
+.media-subhd span{font-size:.78rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);white-space:nowrap}
+.media-subhd .line{flex:1;height:1px;background:var(--rule)}
+.news-list{display:flex;flex-direction:column;gap:.7rem}
+.news-item{display:flex;gap:14px;align-items:flex-start;background:var(--surf);border:1px solid var(--rule);border-radius:12px;padding:1rem 1.2rem;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s}
+.news-item:hover{border-color:var(--blue);transform:translateX(3px)}
+.news-item:hover .news-title{color:var(--blue)}
+.news-ico{font-size:1.1rem;line-height:1.5;flex-shrink:0}
+.news-main{flex:1}
+.news-title{font-size:1rem;font-weight:700;line-height:1.5;color:var(--ink)}
+.news-meta{font-size:.8rem;color:var(--light);margin-top:.3rem}
+.news-meta b{color:var(--teal);font-weight:600}
+.news-arrow{color:var(--light);font-size:1.1rem;align-self:center}
 
 /* ─── PLATFORM CARDS ─── */
 .platform{background:var(--navy);color:#fff}
@@ -218,12 +231,17 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
   <span class="sec-label">Research Interests</span>
   <h2 class="sec-title serif">研究專長</h2>
   <div class="tags">
-    <span class="tag">法布瑞氏症 Fabry Disease</span>
     <span class="tag">中風防治 Stroke Prevention</span>
+    <span class="tag">頭痛 Headache</span>
+    <span class="tag">偏頭痛 Migraine</span>
+    <span class="tag">巴金森氏症 Parkinson's Disease</span>
+    <span class="tag">阿茲海默症 Alzheimer's Disease</span>
     <span class="tag">周邊神經病變 Peripheral Neuropathy</span>
     <span class="tag">顏面神經麻痺 Bell's Palsy</span>
     <span class="tag">急性帶狀皰疹 Acute Herpes Zoster</span>
     <span class="tag">慢性帶狀皰疹神經痛 Chronic Post-herpetic Neuralgia</span>
+    <span class="tag">法布瑞氏症 Fabry Disease</span>
+    <span class="tag">龐貝氏症 Pompe Disease</span>
   </div>
 </section>
 
@@ -343,6 +361,42 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
         <div class="media-title">時常肌肉痛？最容易被忽略的罕病報你知</div>
         <div class="media-date">新聞媒體專訪</div>
       </div>
+    </a>
+
+  </div>
+
+  <div class="media-subhd">
+    <span>新聞報導 · In the News</span>
+    <div class="line"></div>
+  </div>
+
+  <div class="news-list">
+
+    <a class="news-item" href="https://heho.com.tw/archives/224746" target="_blank" rel="noopener">
+      <span class="news-ico">📰</span>
+      <div class="news-main">
+        <div class="news-title">小賈斯汀半臉面癱罹患耳帶狀皰疹　與顏面神經麻痺常搞混</div>
+        <div class="news-meta"><b>Heho 健康</b> · 2022.06.13 · 引述施懿恩醫師解析雷氏亨特氏症候群</div>
+      </div>
+      <span class="news-arrow">↗</span>
+    </a>
+
+    <a class="news-item" href="https://health.ltn.com.tw/article/paper/1102815" target="_blank" rel="noopener">
+      <span class="news-ico">📰</span>
+      <div class="news-main">
+        <div class="news-title">少女罹患法布瑞氏症　頭暈複視以為「卡到陰」</div>
+        <div class="news-meta"><b>自由健康網</b> · 2017.05.16 · 引述施懿恩醫師解說罕病診斷</div>
+      </div>
+      <span class="news-arrow">↗</span>
+    </a>
+
+    <a class="news-item" href="https://heho.com.tw/archives/31932" target="_blank" rel="noopener">
+      <span class="news-ico">📰</span>
+      <div class="news-main">
+        <div class="news-title">男子每次行房都會爆炸性頭痛　元凶竟是嚴重缺乏 B12</div>
+        <div class="news-meta"><b>Heho 健康</b> · 2018.12.17 · 引述施懿恩醫師解說頭痛病因</div>
+      </div>
+      <span class="news-arrow">↗</span>
     </a>
 
   </div>
