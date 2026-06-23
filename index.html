@@ -77,7 +77,18 @@ a{color:inherit}
   content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;
   background:radial-gradient(circle,rgba(66,165,245,.18),transparent 68%);
 }
-.hero-inner{max-width:880px;margin:0 auto;padding:5rem 1.6rem 4rem;position:relative;z-index:1}
+.hero-nav{
+  max-width:880px;margin:0 auto;padding:1.15rem 1.6rem 0;position:relative;z-index:2;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+}
+.hero-brand{font-size:.86rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.82);text-decoration:none}
+.hero-links{display:flex;gap:.45rem;flex-wrap:wrap;justify-content:flex-end}
+.hero-links a{
+  color:rgba(255,255,255,.72);text-decoration:none;font-size:.84rem;font-weight:650;
+  padding:.32rem .75rem;border:1px solid rgba(255,255,255,.2);border-radius:999px;
+}
+.hero-links a:hover,.hero-links a.on{background:rgba(255,255,255,.13);color:#fff;border-color:rgba(255,255,255,.42)}
+.hero-inner{max-width:880px;margin:0 auto;padding:4rem 1.6rem 4rem;position:relative;z-index:1}
 .hero-photo{width:128px;height:128px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.16);box-shadow:0 12px 32px rgba(0,0,0,.32);margin-bottom:1.5rem;display:block}
 .eyebrow{
   font-size:.78rem;letter-spacing:.28em;text-transform:uppercase;
@@ -107,6 +118,8 @@ a{color:inherit}
 .btn-primary:hover{background:#dfeafa;transform:translateY(-2px)}
 .btn-ghost{border:1px solid rgba(255,255,255,.32);color:#fff}
 .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.55)}
+.btn-subscribe{background:#6fb3ff;color:#08172f}
+.btn-subscribe:hover{background:#9bccff;transform:translateY(-2px)}
 
 /* ─── SECTION ─── */
 section{max-width:880px;margin:0 auto;padding:3.6rem 1.6rem}
@@ -210,9 +223,19 @@ section{max-width:880px;margin:0 auto;padding:3.6rem 1.6rem}
 .d-media{background:linear-gradient(135deg,#1d6f6a,#3fb9ad)}
 .d-blog{background:linear-gradient(135deg,#5a3a8c,#9c6ade)}
 .plat-name{font-size:1.15rem;font-weight:700;margin-bottom:.3rem}
+.plat-audience{display:inline-flex;align-self:flex-start;margin-bottom:.55rem;padding:.16rem .55rem;border-radius:999px;background:rgba(111,179,255,.14);color:#9bccff;font-size:.72rem;font-weight:800;letter-spacing:.06em}
 .plat-url{font-size:.78rem;color:rgba(255,255,255,.5);font-family:monospace;margin-bottom:.6rem}
 .plat-desc{font-size:.88rem;color:rgba(255,255,255,.72);line-height:1.6;flex:1}
 .plat-arrow{margin-top:.9rem;font-size:.85rem;color:#6fb3ff;font-weight:600}
+.platform-cta{
+  margin-top:1.4rem;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);
+  border-left:4px solid #6fb3ff;border-radius:10px;padding:1.15rem 1.25rem;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:1rem;align-items:center;
+}
+.platform-cta strong{display:block;color:#fff;font-size:1rem;margin-bottom:.2rem}
+.platform-cta span{display:block;color:rgba(255,255,255,.68);font-size:.86rem;line-height:1.65}
+.platform-cta a{display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--navy);text-decoration:none;border-radius:8px;padding:.62rem 1rem;font-weight:800;font-size:.86rem;white-space:nowrap}
+.platform-cta a:hover{background:#dfeafa}
 
 /* ─── FOOTER ─── */
 footer{background:#0a1426;color:#8295b5;text-align:center;padding:2.6rem 1.6rem;font-size:.86rem;line-height:1.9}
@@ -221,8 +244,12 @@ footer .foot-name{color:#fff;font-weight:700;font-size:1rem}
 footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;justify-content:center}
 
 @media(max-width:560px){
+  .hero-nav{align-items:flex-start;flex-direction:column}
+  .hero-links{justify-content:flex-start}
   .hero-inner{padding:3.5rem 1.3rem 2.8rem}
   section{padding:2.8rem 1.3rem}
+  .platform-cta{grid-template-columns:1fr}
+  .platform-cta a{width:100%}
 }
 </style>
 </head>
@@ -230,6 +257,16 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
 
 <!-- ─── HERO ─── -->
 <div class="hero">
+  <nav class="hero-nav" aria-label="BrainTaiwan 主導覽">
+    <a class="hero-brand" href="https://braintaiwan.com">BrainTaiwan</a>
+    <div class="hero-links">
+      <a class="on" href="https://braintaiwan.com">首頁</a>
+      <a href="https://media.braintaiwan.com">Media</a>
+      <a href="https://md.braintaiwan.com">MD</a>
+      <a href="https://er.braintaiwan.com">ER</a>
+      <a href="https://media.braintaiwan.com/subscribe.html">訂閱</a>
+    </div>
+  </nav>
   <div class="hero-inner">
     <img class="hero-photo" src="ian.jpg" alt="施懿恩 Ian Shih 醫師" width="128" height="128">
     <div class="eyebrow">BrainTaiwan · 神經專科</div>
@@ -244,6 +281,7 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
     <p class="hero-sub">現任臺中清泉醫院神經內科主任。專注於中風防治、實證醫學與系統性回顧研究，並透過 BrainTaiwan 數位平台連結臨床、教育與衛教。</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#platform">探索 BrainTaiwan →</a>
+      <a class="btn btn-subscribe" href="https://media.braintaiwan.com/subscribe.html">訂閱神經健康信</a>
       <a class="btn btn-ghost" href="cv.html">完整中文履歷</a>
     </div>
   </div>
@@ -464,6 +502,7 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
 
       <a class="plat-card" href="https://md.braintaiwan.com">
         <div class="plat-dot d-md">📘</div>
+        <div class="plat-audience">醫療人員</div>
         <div class="plat-name">BrainTaiwan MD</div>
         <div class="plat-url">md.braintaiwan.com</div>
         <div class="plat-desc">臨床資源與系列導讀：功能性癲癇、癲癇重積、DMD 基因治療、失智症等實證導讀。</div>
@@ -472,6 +511,7 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
 
       <a class="plat-card" href="https://er.braintaiwan.com">
         <div class="plat-dot d-er">🚑</div>
+        <div class="plat-audience">急重症現場</div>
         <div class="plat-name">BrainTaiwan ER</div>
         <div class="plat-url">er.braintaiwan.com</div>
         <div class="plat-desc">急重症神經互動決策樹：急性缺血性中風、癲癇重積、急性顱內出血的床邊決策輔助。</div>
@@ -480,12 +520,20 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
 
       <a class="plat-card" href="https://media.braintaiwan.com">
         <div class="plat-dot d-media">📰</div>
+        <div class="plat-audience">一般讀者</div>
         <div class="plat-name">BrainTaiwan Media</div>
         <div class="plat-url">media.braintaiwan.com</div>
         <div class="plat-desc">面向大眾的神經科衛教與時事解析，把艱深的神經醫學翻譯成看得懂的語言。</div>
         <div class="plat-arrow">前往 →</div>
       </a>
 
+    </div>
+    <div class="platform-cta" aria-label="訂閱 BrainTaiwan 神經健康信">
+      <div>
+        <strong>少一點焦慮，多一點判斷力。</strong>
+        <span>訂閱 BrainTaiwan 神經健康信，收到大眾衛教、臨床導讀與 ER 工具更新。</span>
+      </div>
+      <a href="https://media.braintaiwan.com/subscribe.html">訂閱神經健康信</a>
     </div>
   </section>
 </div>
@@ -498,6 +546,7 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
     <a href="https://md.braintaiwan.com">臨床 MD</a>
     <a href="https://er.braintaiwan.com">急重症 ER</a>
     <a href="https://media.braintaiwan.com">衛教 Media</a>
+    <a href="https://media.braintaiwan.com/subscribe.html">訂閱神經健康信</a>
     <a href="https://www.facebook.com/FBbraintaiwan" target="_blank" rel="noopener">Facebook 粉專 ↗</a>
     <a href="cv.html">完整中文履歷</a>
     <a href="mailto:1n@braintaiwan.com">聯絡 / 合作 ✉</a>
