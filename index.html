@@ -179,6 +179,21 @@ section{max-width:880px;margin:0 auto;padding:3.6rem 1.6rem}
 }
 .pub-link:hover{text-decoration:underline}
 
+/* ─── COLLAB / WORK WITH ME ─── */
+.collab{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.6rem}
+.collab-card{background:var(--surf);border:1px solid var(--rule);border-radius:14px;padding:1.5rem;display:flex;flex-direction:column;transition:border-color .2s,box-shadow .2s}
+.collab-card:hover{border-color:#cfe2f7;box-shadow:0 8px 22px rgba(15,33,66,.08)}
+.collab-ico{width:42px;height:42px;border-radius:11px;background:var(--blue-lt);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:.9rem}
+.collab-name{font-size:1.1rem;font-weight:700;margin-bottom:.45rem}
+.collab-desc{font-size:.9rem;color:var(--mid);line-height:1.7;flex:1}
+.collab-link{margin-top:1rem;font-size:.86rem;font-weight:700;color:var(--blue);text-decoration:none;align-self:flex-start}
+.collab-link:hover{text-decoration:underline}
+.collab-note{margin-top:1.4rem;font-size:.82rem;color:var(--light);line-height:1.7}
+
+/* ─── PLATFORM ROUTING ─── */
+.plat-route{margin-top:.9rem;font-size:.95rem;color:rgba(255,255,255,.82);line-height:1.85;max-width:62ch}
+.plat-route b{color:#9bccff;font-weight:700}
+
 /* ─── MEDIA / TALKS ─── */
 .media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:1.6rem}
 .media-card{background:var(--surf);border:1px solid var(--rule);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
@@ -492,12 +507,45 @@ footer .foot-links{margin-top:.8rem;display:flex;flex-wrap:wrap;gap:.4rem 1.4rem
   </div>
 </section>
 
+<!-- ─── COLLAB / WORK WITH ME ─── -->
+<section style="padding-top:0" id="collab">
+  <span class="sec-label">Work With Me</span>
+  <h2 class="sec-title serif">合作 · 邀約</h2>
+  <p class="lead">無論是看診就醫、媒體與演講邀約，或教育與內容合作，都歡迎與我聯繫。</p>
+  <div class="collab">
+
+    <div class="collab-card">
+      <div class="collab-ico">🎤</div>
+      <div class="collab-name">演講 · 媒體邀約</div>
+      <div class="collab-desc">電視健康節目、新聞專訪、講座與工作坊。中風防治、頭痛、神經退化與罕見疾病等主題皆可洽談。</div>
+      <a class="collab-link" href="mailto:1n@braintaiwan.com?subject=演講／媒體邀約">來信邀約 →</a>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-ico">🏥</div>
+      <div class="collab-name">神經內科門診</div>
+      <div class="collab-desc">現任臺中清泉醫院神經內科主任。中風、頭痛、巴金森氏症、失智與周邊神經病變等門診診療，可線上掛號。</div>
+      <a class="collab-link" href="http://webreg.ching-chyuan.com.tw:81/OReg/DocHomePage?sectsuname=%E5%85%A7%E7%A7%91%E7%B3%BB&amp;sectid=13&amp;sectname=%E5%85%A7%E7%A7%91.%E7%A5%9E%E7%B6%93%E5%85%A7%E7%A7%91&amp;docno=00D2017&amp;docname=%E6%96%BD%E6%87%BF%E6%81%A9" target="_blank" rel="noopener">線上掛號 ↗</a>
+    </div>
+
+    <div class="collab-card">
+      <div class="collab-ico">📚</div>
+      <div class="collab-name">課程 · 教育合作</div>
+      <div class="collab-desc">面向醫療人員與機構的臨床教育、實證導讀與內容共創。相關課程規劃中，歡迎提案洽談。</div>
+      <a class="collab-link" href="mailto:1n@braintaiwan.com?subject=課程／教育合作">洽談合作 →</a>
+    </div>
+
+  </div>
+  <p class="collab-note">合作信箱 · <a href="mailto:1n@braintaiwan.com" style="color:var(--blue);text-decoration:none;font-weight:600">1n@braintaiwan.com</a></p>
+</section>
+
 <!-- ─── PLATFORM ─── -->
 <div class="platform" id="platform">
   <section>
     <span class="sec-label">Digital Platform</span>
     <h2 class="sec-title serif" style="color:#fff">BrainTaiwan 數位平台</h2>
     <p class="lead" style="color:rgba(255,255,255,.72)">一個整合臨床決策、急重症工具與衛教的神經科內容生態系。</p>
+    <p class="plat-route">不確定從哪開始？<b>一般民眾</b>從 Media 讀懂自己的症狀，<b>醫療人員</b>到 MD 看實證導讀，<b>急重症現場</b>用 ER 的床邊決策工具。</p>
     <div class="plat-grid">
 
       <a class="plat-card" href="https://md.braintaiwan.com">
